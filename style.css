@@ -1,20 +1,21 @@
-/* Basic reset */
+/* ------------ Reset ------------ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ------------ Base ------------ */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  color: #222;
-  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #111827;
+  background-color: #f3f4f6;
 }
 
-/* Navbar at top */
+/* ------------ Navbar ------------ */
 .navbar {
-  background-color: #5b21b6;  /* purple bar */
+  background-color: #5b21b6;       /* purple bar */
   color: #ffffff;
   padding: 10px 16px;
   display: flex;
@@ -24,49 +25,60 @@ body {
 
 .nav-title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .nav-links a {
-  color: #f9fafb;
+  color: #e5e7eb;
   text-decoration: none;
-  margin-left: 12px;
+  margin-left: 14px;
   font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
-/* Hero section with centered logo */
+/* ------------ Hero ------------ */
 .hero {
-  padding: 60px 20px;
+  background-color: #e5e7ff;
   text-align: center;
-  background-color: #ede9fe;  /* light purple */
+  padding: 50px 16px 40px;
+}
+
+.hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .hero-logo {
-  height: 80px;          /* adjust size of logo */
+  height: 80px;            
   margin-bottom: 16px;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 8px;
+  color: #111827;
 }
 
 .hero p {
   font-size: 15px;
   margin-bottom: 18px;
+  color: #4b5563;
 }
 
+/* Button */
 .btn {
   display: inline-block;
-  padding: 8px 18px;
+  padding: 8px 20px;
   background-color: #5b21b6;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 14px;
 }
 
@@ -74,44 +86,81 @@ body {
   background-color: #4c1d95;
 }
 
-/* Sections */
+/* ------------ Sections ------------ */
 .section {
-  padding: 32px 20px;
+  margin: 24px 0;
 }
 
-.section h2 {
+.section-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+}
+
+.section-box h2 {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: #111827;
 }
 
-.section p {
-  max-width: 650px;
+.section-box p {
   font-size: 14px;
+  color: #4b5563;
 }
 
-.section-light {
-  background-color: #f3f4f6;
+/* Slightly different background for second section */
+.section-box.alt {
+  background-color: #f9fafb;
 }
 
-.section-light ul {
+/* List for "Why Join Us" / Events */
+.section-box ul {
   margin-top: 8px;
   margin-left: 18px;
   font-size: 14px;
+  color: #4b5563;
 }
 
-.section-light li {
+.section-box li {
   margin-bottom: 4px;
 }
 
-/* Footer */
+/* ------------ Footer / Contact ------------ */
 .footer {
   background-color: #111827;
   color: #d1d5db;
   text-align: center;
   padding: 18px 12px;
   font-size: 13px;
+  margin-top: 30px;
 }
 
 .footer p {
   margin-bottom: 4px;
+}
+
+/* ------------ Small screens ------------ */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 6px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-logo {
+    height: 70px;
+  }
 }
