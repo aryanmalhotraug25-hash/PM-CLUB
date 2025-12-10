@@ -25,5 +25,5 @@ It follows the task requirements: a navbar, hero section with logo, about sectio
 - CSS3  
 
 
-## Project Structure
+
 
